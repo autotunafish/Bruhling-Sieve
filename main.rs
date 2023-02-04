@@ -59,7 +59,7 @@ fn main() {
 	
 	//This sets the range. 0..=611953 in particular holds 50000 primes
 	//0..=15485863 holds 1,000,000 primes
-	let height = 15485863;
+	let height = 611953;
 	
 	//Iterate through the range. 
      for _i in 0..=height {
