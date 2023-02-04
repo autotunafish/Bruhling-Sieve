@@ -12,7 +12,9 @@
 //
 //
 //Any prime number applied a MOD function with the value 180 will result in one  
-//of forty-eight values between 1 and 180. Those values are 1 | 7 | 11 | 13 | 17 | 19 | 23 | 29 | 31 | 37 | 41 | 43 | 47 | 49 | 53 | 59 | 61 | 67 | 71 | 73 | 77 | 79 | 83 | 89 | 91 | 97 | 101 | 103 | 107 | 109 | 113 | 119 | 121 | 127 | 131 | 133 | 137 | 139 | 143 | 149 | 151 | 157 | 161 | 163 | 167 | 169 | 173 | 179
+//of forty-eight values between 1 and 180. Those values are 1 | 7 | 11 | 13 | 17 | 19 | 23 | 29 | 31 | 37 | 41 | 43 | 47 | 49 | 53 | 59 | 61 | 67 | 71 |
+//73 | 77 | 79 | 83 | 89 | 91 | 97 | 101 | 103 | 107 | 109 | 113 | 119 | 121 | 127 | 131 | 133 | 137 | 139 | 143 | 149 | 151 | 157 | 161 | 163 | 167 | 
+//169 | 173 | 179
 //Any prime number that does not yield one of the forty-eight values listed 
 //above from a MOD 180 function applied cannot possibly be prime. 
 //
