@@ -12,18 +12,15 @@
 //
 //
 //Any prime number applied a MOD function with the value 180 will result in one  
-//of forty-eight values between 1 and 180. Those values are 1 | 7 | 11 | 13 | 17 | 19 | 23 | 29 | 31 | 37 | 41 | 43 | 47 | 49 | 53 | 59 | 61 | 67 | 71 |
-//73 | 77 | 79 | 83 | 89 | 91 | 97 | 101 | 103 | 107 | 109 | 113 | 119 | 121 | 127 | 131 | 133 | 137 | 139 | 143 | 149 | 151 | 157 | 161 | 163 | 167 | 
-//169 | 173 | 179
-//Any odd number that does not yield one of the forty-eight values listed 
-//above from a MOD 180 function applied cannot possibly be prime. 
+//of 24 values between 1 and 90. Those values are 1 | 7 | 11 | 13 | 17 | 19 | 23 | 29 | 31 | 37 | 41 | 43 | 47 | 49 | 53 | 59 | 61 | 67 | 71 | 73 | 77 | 79 | 83 | 89 
+//Any prime number that does not yield one of the 24 values listed 
+//above from a MOD 90 function applied cannot possibly be prime. 
 //
 //The omitted values 2, 3, and 5 are technically prime but only appear once as 
 //MOD values and for the coresponding integers 2, 3, and 5 while the others are 
-//repeatedly called and so whether or not to arrive at forty-eight or fifty-one 
-//as the value claimed wasn't so intuitive. These three values are totally 
+//repeatedly called. These three values are totally 
 //exclusive to themselves while all of the other MOD values are shared amongst 
-//all the other primes and it was with this in mind that forty-eight was 
+//all the other primes and it was with this in mind that 24 was 
 //decided upon as the number of MOD values given in the description despite the 
 //minor technicalities.
 //
@@ -39,8 +36,8 @@
 //and very clearly can be seen, perhaps not a discernable order of occurances
 //but certainly a type of periodicity in the locations relative to the number //line which in that case was base 360 and the 'line' as a circle (I like to 
 //think of it all as a cylinder shape). As stated the spiral mirrors itself and
-//it suffices to use a base 180 (MOD 180) to get the correct result. 
-//This algorithm eliminates having to evaluate 42 of the 90 odd numbers in any //linear set of len 180 and reduces the need of all prime evaluations in 
+//it suffices to use a base 90 (MOD 90) to get the correct result. 
+//This algorithm eliminates having to evaluate 21 of the 45 odd numbers in any //linear set of len 90 and reduces the need of all prime evaluations in 
 //the counting program by nearly half.
 //
 //
@@ -60,7 +57,7 @@ fn main() {
 	
 	//This sets the range. 0..=611953 in particular holds 50000 primes
 	//0..=15485863 holds 1,000,000 primes
-	let height = 611953;
+	let height = 15485863;
 	
 	//Iterate through the range. 
      for _i in 0..=height {
@@ -71,31 +68,30 @@ fn main() {
 			continue
 		}
 	}
-	//This gets the MOD 180 of the odd number.
+	//This gets the MOD 90 of the odd number.
 	//If it is not one of the values below then it is not prime
-     let md = _i % 180;
+     let md = _i % 90;
 			
 			//2,3,5 are just for the integers "2,3 and 5" and only appear
 			//for those integers. These and any other numbers in the match can 
 			//verified as being effective by simply removing it and replacing 
 			//it in the second test-arm. This will print the designated values 
 			//w/o affecting the total prime count.
-	     
-			//!!The enire match md{} can be removed to run the prime check 
+			//The enire match md{} can be removed to run the prime check 
 			//further below on every odd number to cross-check the output as 
-			//well!!
+			//well.
 			//There is a println near the bottom to only print the 2,3 and 5 
 			//MOD values when they occur to verify that they only occur once.
 			
-			//The 48 numbers below represent all 40 primes between 0 and 180
+			//The numbers below represent all primes between 0 and 90
 			//plus 8 more odd numbers plus '2,3,and 5' for a total of 51. 
-			//All primes of any size applied a MOD 180 function will yield one
+			//All primes of any size applied a MOD 90 function will yield one
 			//of these values below. Else not possibly prime.
 			match md {
-				1 | 2 | 3 | 5 | 7 | 11 | 13 | 17 | 19 | 23 | 29 | 31 | 37 | 41 | 43 | 47 | 49 | 53 | 59 | 61 | 67 | 71 | 73 | 77 | 79 | 83 | 89 | 91 | 97 | 101 | 103 | 107 | 109 | 113 | 119 | 121 | 127 | 131 | 133 | 137 | 139 | 143 | 149 | 151 | 157 | 161 | 163 | 167 | 169 | 173 | 179 => (),
+				1 | 2 | 3 | 5 | 7 | 11 | 13 | 17 | 19 | 23 | 29 | 31 | 37 | 41 | 43 | 47 | 49 | 53 | 59 | 61 | 67 | 71 | 73 | 77 | 79 | 83 | 89  => (),
 				
 				//	test-arm is preset for removing the value 53 above.
-				//Anytime the _i MOD 180 = 53 it will print.
+				//Anytime the _i MOD 90 = 53 it will print.
 				//53 => { println!("{}..{}", &_i, &md); }
 				
 				//cannot possibly be prime.
@@ -151,7 +147,7 @@ fn main() {
 			
 			//This prints whenever 2,3 or 5 are the MOD
 			//match md {
-			//	2 | 3 | 5 => println!("{}..{}", &_i, &md),
+			//	2 | 3| 5 => println!("{}..{}", &_i, &md),
 			//	_ => ()
 			//}
 		} 
