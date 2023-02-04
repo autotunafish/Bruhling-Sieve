@@ -83,8 +83,6 @@ fn main() {
 			//There is a println near the bottom to only print the 2,3 and 5 
 			//MOD values when they occur to verify that they only occur once.
 			
-			//The numbers below represent all primes between 0 and 90
-			//plus 8 more odd numbers plus '2,3,and 5' for a total of 51. 
 			//All primes of any size applied a MOD 90 function will yield one
 			//of these values below. Else not possibly prime.
 			match md {
