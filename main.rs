@@ -11,7 +11,7 @@
 //
 //
 //
-//Any prime number applied a MOD function with the value 180 will result in one  
+//Any prime number applied a MOD function with the value 90 will result in one  
 //of 24 values between 1 and 90. Those values are 1 | 7 | 11 | 13 | 17 | 19 | 23 | 29 | 31 | 37 | 41 | 43 | 47 | 49 | 53 | 59 | 61 | 67 | 71 | 73 | 77 | 79 | 83 | 89 
 //Any prime number that does not yield one of the 24 values listed 
 //above from a MOD 90 function applied cannot possibly be prime. 
@@ -34,10 +34,12 @@
 //increasing velocity (first loop 1-360, second 361-720, third 
 //721-1080..repeat). Along the spiral are plotted the primes as they occured 
 //and very clearly can be seen, perhaps not a discernable order of occurances
-//but certainly a type of periodicity in the locations relative to the number //line which in that case was base 360 and the 'line' as a circle (I like to 
+//but certainly a type of periodicity in the locations relative to the number 
+//line which in that case was base 360 and the 'line' as a circle (I like to 
 //think of it all as a cylinder shape). As stated the spiral mirrors itself and
 //it suffices to use a base 90 (MOD 90) to get the correct result. 
-//This algorithm eliminates having to evaluate 21 of the 45 odd numbers in any //linear set of len 90 and reduces the need of all prime evaluations in 
+//This algorithm eliminates having to evaluate 21 of the 45 odd numbers in any 
+//linear set of len 90 and reduces the need of all prime evaluations in 
 //the counting program by nearly half.
 //
 //
