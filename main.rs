@@ -70,6 +70,13 @@ fn main() {
 			continue
 		}
 	}
+	     
+	//This quickly filters all numbers div 5 except 5 itself
+	if _i != 5 {	
+		if _i % 5 == 0 {
+			continue
+		}
+	}
 	//This gets the MOD 90 of the odd number.
 	//If it is not one of the values below then it is not prime
      let md = _i % 90;
