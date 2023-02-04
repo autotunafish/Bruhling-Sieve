@@ -151,7 +151,7 @@ fn main() {
 			
 			//This prints whenever 2,3 or 5 are the MOD
 			//match md {
-			//	2 | 3| 5 => println!("{}..{}", &_i, &md),
+			//	2 | 3 | 5 => println!("{}..{}", &_i, &md),
 			//	_ => ()
 			//}
 		} 
