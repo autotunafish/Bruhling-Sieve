@@ -80,9 +80,10 @@ fn main() {
 			//verified as being effective by simply removing it and replacing 
 			//it in the second test-arm. This will print the designated values 
 			//w/o affecting the total prime count.
-			//The enire match md{} can be removed to run the prime check 
+	     
+			//!!The enire match md{} can be removed to run the prime check 
 			//further below on every odd number to cross-check the output as 
-			//well.
+			//well!!
 			//There is a println near the bottom to only print the 2,3 and 5 
 			//MOD values when they occur to verify that they only occur once.
 			
