@@ -1,5 +1,5 @@
 //John R Bruhling
-//02-03-23 21:56
+//02-05-23 21:36
 //autotunafish@yahoo.com
 //
 //The Bruhling Sieve
@@ -11,10 +11,10 @@
 //
 //
 //
-//Any prime number applied a MOD function with the value 90 will result in one  
-//of 24 values between 1 and 90. Those values are 1 | 7 | 11 | 13 | 17 | 19 | 23 | 29 | 31 | 37 | 41 | 43 | 47 | 49 | 53 | 59 | 61 | 67 | 71 | 73 | 77 | 79 | 83 | 89 
-//Any prime number that does not yield one of the 24 values listed 
-//above from a MOD 90 function applied cannot possibly be prime. 
+//Any prime number applied a MOD function with the value 30 will result in one  
+//of 8 values between 1 and 30. Those values are 1 | 7 | 11 | 13 | 17 | 19 | 23 | 29 
+//Any prime number (>5) that does not yield one of the 8 values listed 
+//above from a MOD 30 function applied cannot possibly be prime. 
 //
 //The omitted values 2, 3, and 5 are technically prime but only appear once as 
 //MOD values and for the coresponding integers 2, 3, and 5 while the others are 
@@ -37,9 +37,9 @@
 //but certainly a type of periodicity in the locations relative to the number 
 //line which in that case was base 360 and the 'line' as a circle (I like to 
 //think of it all as a cylinder shape). As stated the spiral mirrors itself and
-//it suffices to use a base 90 (MOD 90) to get the correct result. 
-//This algorithm eliminates having to evaluate 21 of the 45 odd numbers in any 
-//linear set of len 90 and reduces the need of all prime evaluations in 
+//it suffices to use a base 30 (MOD 30) to get the correct result. 
+//This algorithm eliminates having to evaluate 4 of the 12 odd numbers in any 
+//linear set of len 30 and reduces the need of all prime evaluations in 
 //the counting program by nearly half.
 //
 //
@@ -77,9 +77,9 @@ fn main() {
 			continue
 		}
 	}
-	//This gets the MOD 90 of the odd number.
+	//This gets the MOD 30 of the odd number.
 	//If it is not one of the values below then it is not prime
-     let md = _i % 90;
+     let md = _i % 30;
 			
 			//2,3,5 are just for the integers "2,3 and 5" and only appear
 			//for those integers. These and any other numbers in the match can 
@@ -92,14 +92,14 @@ fn main() {
 			//There is a println near the bottom to only print the 2,3 and 5 
 			//MOD values when they occur to verify that they only occur once.
 			
-			//All primes of any size applied a MOD 90 function will yield one
+			//All primes of any size applied a MOD 30 function will yield one
 			//of these values below. Else not possibly prime.
 			match md {
-				1 | 2 | 3 | 5 | 7 | 11 | 13 | 17 | 19 | 23 | 29 | 31 | 37 | 41 | 43 | 47 | 49 | 53 | 59 | 61 | 67 | 71 | 73 | 77 | 79 | 83 | 89  => (),
+				1 | 2 | 3 | 5 | 7 | 11 | 13 | 17 | 19 | 23 | 29 => (),
 				
-				//	test-arm is preset for removing the value 53 above.
-				//Anytime the _i MOD 90 = 53 it will print.
-				//53 => { println!("{}..{}", &_i, &md); }
+				//	test-arm is preset for removing the value 13 above.
+				//Anytime the _i MOD 30 = 13 it will print.
+				//13 => { println!("{}..{}", &_i, &md); }
 				
 				//cannot possibly be prime.
 				_ => continue
