@@ -165,3 +165,13 @@ fn main() {
 	println!("total primes: {}", &cont);
 	println!("total millis: {}", now.elapsed().as_millis());
 }
+
+//Note
+//Performance was increased a non-trivial amount by increasing the mod value of "md = _i % 30" to 90, 180,
+//360, etc and applying a larger match statement and effectively performing less computations overall. 
+//The following works for mod 360
+// 1 | 7 | 11 | 13 | 17 | 19 | 23 | 29 | 31 | 37 | 41 | 43 | 47 | 49 | 53 | 59 | 61 | 67 | 71 | 73 | 77 | 79 | 83 | 89 |
+//91 | 97 | 101 | 103 | 107 | 109 | 113 | 119 | 121 | 127 | 131 | 133 | 137 | 139 | 143 | 149 | 151 | 157 | 161 | 163 | 167 | 169 | 173 | 179 | 				 
+//181 | 187 | 191 | 193 | 197 | 199 | 203 | 209 | 211 | 217 | 221 | 223 | 227 | 229 | 233 | 239 | 241 | 247 | 251 | 253 | 257 | 259 | 263 | 269 |
+// 271 | 277 | 281 | 283 | 287 | 289 | 293 | 299 | 301 | 307 | 311 | 313 | 317 | 319 | 323 | 329 | 331 | 337 | 341 | 343 | 347 | 349 | 353 | 359 |
+
